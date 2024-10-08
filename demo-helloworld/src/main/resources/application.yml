@@ -1,0 +1,3 @@
+# default server.port:8080 
+server:
+  port: 8081 # must have 2 space befor port and must have a space between : and 8081

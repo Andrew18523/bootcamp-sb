@@ -1,0 +1,25 @@
+server:
+  port: 8085
+
+# target: https://jsonplaceholder.typicode.com/users
+# https:// -> Scheme
+# jasonplaceholder.type.com -> domain
+# users ->endpoint
+
+api: #Unknown property 'api' https://jsonplaceholder.typicode.com/users
+  domain: jsonplaceholder.typicode.com
+  endpoint:
+    user: /users
+
+
+spring:
+  datasource:
+    # Postgres
+    driverClassName: "org.postgresql.Driver"
+    url: "jdbc:postgresql://localhost:5432/bc2405p_db"
+    username: postgres
+    password: Admin1234
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop 
