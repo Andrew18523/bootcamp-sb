@@ -1,0 +1,5 @@
+# Created at 2024-10-16T20:20:40.042
+Boot Manifest-JAR contains absolute paths in classpath 'D:\software\Git\tutorial\bc2405p\furniture-factory-exercise\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
