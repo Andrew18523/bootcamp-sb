@@ -1,12 +1,12 @@
 server:
-  port: 8081
+  port: 8082
 
 api:
   url:
-    domain: "jsonplaceholder.typicode.com"
+    domain: jsonplaceholder.typicode.com
     endpoint:
-      user: "users"
-      post: "posts"
+      user: /users
+      post: /posts
 
 spring:
   datasource:
@@ -14,15 +14,12 @@ spring:
     driverClassName: "org.postgresql.Driver"
     url: "jdbc:postgresql://localhost:5432/bc2405p_db"
     username: postgres
-    password: admin1234
+    password: Admin1234
+    # MySQL
+    # driverClassName: "com.mysql.jdbc.Driver"
+    # url: "jdbc:mysql://localhost:3306/bc2405p_db"
+    # username: "root"
+    # password: "admin1234"
   jpa:
     show-sql: true
-    hibernate:
-      ddl-auto: create-drop 
-      # //update
-    #   driverClassName: "com.mysql.jdbc.Driver"
-    #   url: "jdbc:mysql://localhost:3306/bc2405p_db"
-    #   username: "root"
-    #   password: "admin1234"
-
-    #       dialect: "org.hibernate.dialect.MySQL8Dialect"
+    hibernate.ddl-auto: create 

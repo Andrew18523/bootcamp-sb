@@ -6,6 +6,9 @@
 3. create Folder under <groupId>com.bootcamp.demo</groupId> and 	<artifactId>demo-api</artifactId>
 com.bootcamp.demo/demo-api
 3.1 Create: Controller, Service, Config, infra, model
+3.2 Config -> Create AppConfig.java to call API
+
+
 
 4. Call third party API -> https://jsonplaceholder.typicode.com/users -> breakdown the API path in application.yml
 4.1 In application.yml

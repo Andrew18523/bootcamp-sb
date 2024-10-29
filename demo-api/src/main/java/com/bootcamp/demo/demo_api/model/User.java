@@ -1,6 +1,5 @@
 package com.bootcamp.demo.demo_api.model;
 
-import org.springframework.boot.autoconfigure.amqp.RabbitConnectionDetails.Address;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -15,14 +14,14 @@ import lombok.ToString;
 @ToString
 @Builder
 public class User {
-  private int id;
-    private String name;
-    private String username;
-    private String email;
-    private Address address;
-    private String phone;
-    private String website;
-    private Company company;
+  private Integer id;
+  private String name;
+  private String username;
+  private String email;
+  private Address address;
+  private String phone;
+  private String website;
+  private Company company;
 
     @Getter
     @Setter

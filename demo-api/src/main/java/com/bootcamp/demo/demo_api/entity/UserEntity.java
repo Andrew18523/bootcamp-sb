@@ -8,16 +8,21 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "t_users")
 @Getter
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 public class UserEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
-  private String name;
-
+    private Long id;
+    private String name;
+    private String username;
+    private String email;
+    private String phone;
+    private String website;
 }

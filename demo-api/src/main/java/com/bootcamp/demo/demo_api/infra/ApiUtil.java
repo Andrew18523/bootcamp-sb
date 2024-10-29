@@ -22,7 +22,7 @@ public class ApiUtil {
   .scheme(scheme.name()) //http/https
   .host(domain) //xxx.com
   .path(endpoint)
-  .build(false)
+  //.build(false)
   .toUriString(); //組合API
 
   // public String getUrl(Scheme scheme, String endpoint, Map<String,String> requestParam){

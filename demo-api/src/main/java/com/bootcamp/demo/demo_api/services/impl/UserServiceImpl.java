@@ -1,9 +1,8 @@
 package com.bootcamp.demo.demo_api.services.impl;
 
-import java.util.HashMap;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -35,19 +34,23 @@ public class UserServiceImpl implements UserServices {
   private ApiUtil apiUtil;
 
   @Override
-  public List<User> getUsers(){
+  public User[] getUsers(){
     User[] userArr = restTemplate.getForObject(apiUtil.getUrl(Scheme.HTTPS, userEndpoint), User[].class);
 
-    List<UserEntity> userList = this.covertArrToList(userArr).stream()//
-    .map(u->mapper.map(u))//
-    .collect(Collectors.toList());
+    Arrays.asList(userArr).stream().forEach(user -> {
+    userRepository.save(Mapper.map(user)); //
+    });
 
-    userRepository.saveAll(userList);
-    return covertArrToList(userArr);
+    return userArr;
   }
 
-  private List<User> covertArrToList(User[] userArr){
-    return List.of(userArr);
+  @Override
+  public Optional<UserEntity> getUser(Long userID){
+    return this.userRepository.findById(userID);
+  }
+
+  
+
 
     // public String getOpenRiceExample(){
     //   Map<String, String> map = new HashMap<>();
@@ -55,5 +58,5 @@ public class UserServiceImpl implements UserServices {
     //   map.put("tmReservation","true");
 
     // }
-  }
+
 }
