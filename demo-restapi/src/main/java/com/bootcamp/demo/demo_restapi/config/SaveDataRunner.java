@@ -39,7 +39,7 @@ public class SaveDataRunner implements CommandLineRunner {
 
     // One to Many
     List<UserEntity> userEntities = users.stream().map(u->{
-      UserEntity userEntity = this.jphMapper.map(u);
+      UserEntity userEntity = this.jphMapper.map(u); //List<UserDto> to User En
 
       List<PostEntity> postEntities = posts.stream()
         .filter(p-> p.getUserId().equals(u.getId()))
