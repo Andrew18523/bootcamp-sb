@@ -1,6 +1,4 @@
-package com.bootcamp.demo.demo_restapi.bootcamp;
-
-import lombok.Getter;
+package com.bootcamp.demo.demo_restapi.util;
 
 public enum SysCode {
   OK("000000","Success."),

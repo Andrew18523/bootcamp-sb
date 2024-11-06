@@ -7,10 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import com.bootcamp.demo.demo_restapi.bootcamp.BusinessException;
-import com.bootcamp.demo.demo_restapi.bootcamp.ErrorCode;
-import com.bootcamp.demo.demo_restapi.bootcamp.Scheme;
-import com.bootcamp.demo.demo_restapi.bootcamp.UrlManager;
 import com.bootcamp.demo.demo_restapi.entity.UserEntity;
 import com.bootcamp.demo.demo_restapi.mapper.GovMapper;
 import com.bootcamp.demo.demo_restapi.mapper.JPHmapper;
@@ -18,6 +14,10 @@ import com.bootcamp.demo.demo_restapi.model.dto.GovUserDto;
 import com.bootcamp.demo.demo_restapi.model.dto.UserDto;
 import com.bootcamp.demo.demo_restapi.repository.UserRepository;
 import com.bootcamp.demo.demo_restapi.services.UserServices;
+import com.bootcamp.demo.demo_restapi.util.BusinessException;
+import com.bootcamp.demo.demo_restapi.util.ErrorCode;
+import com.bootcamp.demo.demo_restapi.util.Scheme;
+import com.bootcamp.demo.demo_restapi.util.UrlManager;
 
 @Service
 public class UserServiceHolder implements UserServices {

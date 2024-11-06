@@ -1,6 +1,6 @@
 //Library Class
 
-package com.bootcamp.demo.demo_restapi.bootcamp;
+package com.bootcamp.demo.demo_restapi.util;
 
 import org.springframework.web.util.UriComponentsBuilder;
 

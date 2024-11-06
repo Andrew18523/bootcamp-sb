@@ -1,4 +1,4 @@
-package com.bootcamp.demo.demo_restapi.exception;
+package com.bootcamp.demo.demo_restapi.util;
 
 //用呢一個CLASS 去THROW 出去
 

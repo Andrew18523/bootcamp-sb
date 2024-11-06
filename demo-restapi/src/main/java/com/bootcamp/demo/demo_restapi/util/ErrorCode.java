@@ -1,4 +1,4 @@
-package com.bootcamp.demo.demo_restapi.bootcamp;
+package com.bootcamp.demo.demo_restapi.util;
 
 public enum ErrorCode {
   USER_ID_NOT_FOUND(1,"User ID Not Found"),;

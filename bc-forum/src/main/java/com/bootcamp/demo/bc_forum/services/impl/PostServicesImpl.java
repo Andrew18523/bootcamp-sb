@@ -33,9 +33,11 @@ public class PostServicesImpl implements PostServices {
     String url = urlManager.getUrl(endpoint);
     System.out.println("Check url = "+url);
     List<PostPlaceHolder> postDtos = List.of(restTemplate.getForObject(url, PostPlaceHolder[].class));
-    postDtos.stream().forEach(postDto->{
-      postRepository.save(mapper.map(postDto));
-    });
+    if(postRepository.findAll().isEmpty()){
+      postDtos.stream().forEach(postDto->{
+        postRepository.save(mapper.map(postDto));
+      });
+    }
     return postDtos;
   }
 

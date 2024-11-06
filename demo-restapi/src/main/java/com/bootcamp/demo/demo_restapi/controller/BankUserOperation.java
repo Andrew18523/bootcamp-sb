@@ -4,10 +4,10 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
-import com.bootcamp.demo.demo_restapi.bootcamp.GeneralResponse;
 import com.bootcamp.demo.demo_restapi.entity.UserEntity;
 import com.bootcamp.demo.demo_restapi.model.dto.BankUserDto;
 import com.bootcamp.demo.demo_restapi.model.dto.UserDto;
+import com.bootcamp.demo.demo_restapi.util.GeneralResponse;
 
 
 // 1. PathVariable

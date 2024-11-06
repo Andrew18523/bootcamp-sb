@@ -8,12 +8,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import com.bootcamp.demo.demo_restapi.bootcamp.UrlManager;
 import com.bootcamp.demo.demo_restapi.entity.PostEntity;
 import com.bootcamp.demo.demo_restapi.mapper.JPHmapper;
 import com.bootcamp.demo.demo_restapi.model.dto.PostDto;
 import com.bootcamp.demo.demo_restapi.repository.PostRepository;
 import com.bootcamp.demo.demo_restapi.services.PostServices;
+import com.bootcamp.demo.demo_restapi.util.UrlManager;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 

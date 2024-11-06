@@ -33,9 +33,12 @@ public class CommentServiceImpl implements CommentServices {
     String url = urlManager.getUrl(endpoint);
     System.out.println("Check url = "+url);
     List<CommentPlaceHolder> commentDtos = List.of(restTemplate.getForObject(url, CommentPlaceHolder[].class));
-    commentDtos.stream().forEach(commentDto->{
-      commentRepository.save(mapper.map(commentDto));
-    });
+    if (commentRepository.findAll().isEmpty()){
+      commentDtos.stream().forEach(commentDto->{
+        commentRepository.save(mapper.map(commentDto));
+      });
+
+    }
     return commentDtos;
   }
 

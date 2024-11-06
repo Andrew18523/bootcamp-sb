@@ -14,11 +14,12 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import com.bootcamp.demo.demo_restapi.controller.impl.BankUserController;
 import com.bootcamp.demo.demo_restapi.entity.UserEntity;
+import com.bootcamp.demo.demo_restapi.mapper.BankMapper;
 import com.bootcamp.demo.demo_restapi.services.UserServices;
 
 //@SpringBootTest // @SpringBootTest is full Scale of Spring Context which test @Controller @Service etc.
 @WebMvcTest // @WebMvcTest is not a full Scale test. A test spring enviroment
-// consist of web related beans + some other bean for test (e.g MockMvc)
+// consist of controller beans (web related) + some other bean for test (e.g MockMvc)
 public class BankUserControllerTest {
 
   @Autowired
@@ -28,8 +29,8 @@ public class BankUserControllerTest {
   @MockBean
   private UserServices userServices;
 
-  @SpyBean
-  private UserServices userServices2;
+  @SpyBean //我唔打算MOCK BANKMAPPER 嘅行為，而係直接用BANKMAPPER 嘅行為。所以用SPYBEAN
+  private BankMapper bankMapper;
 
   @Test
   void testGetUserByUserName() throws Exception{

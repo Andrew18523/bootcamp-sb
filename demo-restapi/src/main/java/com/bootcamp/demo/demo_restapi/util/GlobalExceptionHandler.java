@@ -1,10 +1,7 @@
-package com.bootcamp.demo.demo_restapi.exception;
+package com.bootcamp.demo.demo_restapi.util;
 
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import com.bootcamp.demo.demo_restapi.bootcamp.BusinessException;
-import com.bootcamp.demo.demo_restapi.bootcamp.GeneralResponse;
-import com.bootcamp.demo.demo_restapi.bootcamp.SysCode;
 
 // Happy Flow: Method A call Method B call Method C to return C then B then return A
 // Exception: Method A call Method B call Method C -> throw exception -> B handle exception

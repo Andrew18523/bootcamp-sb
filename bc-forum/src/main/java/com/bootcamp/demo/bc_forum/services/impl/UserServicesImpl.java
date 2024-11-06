@@ -45,9 +45,11 @@ public class UserServicesImpl implements UserServices {
     String url = urlManager.getUrl(endpoint);
     System.out.println("Check url = "+url);
     List<UserPlaceHolder> userDtos = List.of(restTemplate.getForObject(url, UserPlaceHolder[].class));
-    userDtos.stream().forEach(userDto->{
-      userRepository.save(mapper.map(userDto));
-    });
+    if (userRepository.findAll().isEmpty()){
+      userDtos.stream().forEach(userDto->{
+        userRepository.save(mapper.map(userDto));
+      });
+    }
     return userDtos;
   }
 

@@ -2,7 +2,6 @@ package com.bootcamp.demo.bc_forum.util;
 
 import java.util.List;
 import java.util.stream.Collectors;
-import javax.xml.stream.events.Comment;
 import org.springframework.stereotype.Component;
 import com.bootcamp.demo.bc_forum.entity.AddressEntity;
 import com.bootcamp.demo.bc_forum.entity.CommentEntity;
@@ -13,7 +12,6 @@ import com.bootcamp.demo.bc_forum.entity.UserEntity;
 import com.bootcamp.demo.bc_forum.model.dto.CommentDto;
 import com.bootcamp.demo.bc_forum.model.dto.CommentPlaceHolder;
 import com.bootcamp.demo.bc_forum.model.dto.PostPlaceHolder;
-import com.bootcamp.demo.bc_forum.model.dto.UserCommentDto;
 import com.bootcamp.demo.bc_forum.model.dto.UserDto;
 import com.bootcamp.demo.bc_forum.model.dto.UserPlaceHolder;
 import com.bootcamp.demo.bc_forum.model.dto.UserDto.AddressDto;

@@ -4,15 +4,15 @@ import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
-import com.bootcamp.demo.demo_restapi.bootcamp.BusinessException;
-import com.bootcamp.demo.demo_restapi.bootcamp.ErrorCode;
-import com.bootcamp.demo.demo_restapi.bootcamp.GeneralResponse;
-import com.bootcamp.demo.demo_restapi.bootcamp.SysCode;
 import com.bootcamp.demo.demo_restapi.controller.GovUserOperation;
 import com.bootcamp.demo.demo_restapi.entity.UserEntity;
 import com.bootcamp.demo.demo_restapi.mapper.GovMapper;
 import com.bootcamp.demo.demo_restapi.model.dto.GovUserDto;
 import com.bootcamp.demo.demo_restapi.services.UserServices;
+import com.bootcamp.demo.demo_restapi.util.BusinessException;
+import com.bootcamp.demo.demo_restapi.util.ErrorCode;
+import com.bootcamp.demo.demo_restapi.util.GeneralResponse;
+import com.bootcamp.demo.demo_restapi.util.SysCode;
 
 @RestController
 public class GovUserController implements GovUserOperation {

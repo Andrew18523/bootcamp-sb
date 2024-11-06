@@ -25,4 +25,6 @@ public class GlobalExceptioHandler {
         .message(ErrorCode.UNKNOWN_ERROR.getMessage())//
         .build();
   }
+
+
 }
